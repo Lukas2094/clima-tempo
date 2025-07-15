@@ -6,11 +6,12 @@ export async function GET(request: Request) {
   const city = searchParams.get('city') || 'São Paulo';
 
   try {
-    const { data } = await axios.get(`http://api.weatherapi.com/v1/current.json`, {
+    const { data } = await axios.get(`http://api.weatherapi.com/v1/forecast.json`, {
       params: {
         key: process.env.WEATHER_API_KEY,
         q: city,
         lang: 'pt',
+        days: 3,
       },
     });
 
