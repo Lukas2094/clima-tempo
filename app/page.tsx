@@ -5,7 +5,7 @@ import { WeatherLive } from '@/components/Weather';
 export const dynamic = 'force-dynamic';
 
 async function getInitialWeather(city: string) {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://clima-tempo-two.vercel.app';
   const { data } = await axios.get(`${baseUrl}/api/weather`, {
     params: { city },
   });
