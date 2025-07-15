@@ -87,13 +87,13 @@ export function WeatherLive({ city: initialCity, initial }: { city: string; init
                                 
                                 {/* Previsão para os próximos 3 dias */}
                                 {weather.forecast?.forecastday?.length > 0 && (
-                                    <div className="mt-8 bg-blue-600">
+                                    <div className="mt-8">
                                         <h3 className="text-xl font-bold mb-4 text-white">Previsão para os próximos dias</h3>
                                         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                                             {weather.forecast.forecastday.map((day: any) => (
                                                 <div
                                                     key={day.date}
-                                                    className="bg-white bg-opacity-10 backdrop-blur-lg rounded-lg p-4 text-white text-center shadow transition hover:scale-105"
+                                                    className="bg-blue-600 bg-opacity-10 backdrop-blur-lg rounded-lg p-4 text-white text-center shadow transition hover:scale-105"
                                                 >
                                                     <p className="text-sm font-medium mb-1 text-red-600">{formatDate(day.date)}</p>
                                                     <img
